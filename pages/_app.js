@@ -5,9 +5,11 @@ import Grid from "../components/Grid";
 import Page from "../components/Page";
 import Teaser from "../components/Teaser";
 import RandomCatFact from "../components/RandomCatFact";
+import FeaturedPosts from "../components/FeaturedPosts";
 
 const components = {
   "random-cat-fact": RandomCatFact,
+  "featured-posts": FeaturedPosts,
   feature: Feature,
   grid: Grid,
   teaser: Teaser,

@@ -1,17 +1,28 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 
-const RandomCatFact = () => {
-      const [catFact, setCatFact] = useState("");
+const RandomCatFacts = ({ blok }) => {
+  const [catFacts, setCatFacts] = useState([]);
 
   useEffect(() => {
     fetch("https://cat-fact.herokuapp.com/facts")
       .then((res) => res.json())
-      .then((data) => setCatFact(data[Math.floor(Math.random() * 5)].text));
+      .then((data) => setCatFacts(data.slice(0, blok.number_of_facts)));
   }, []);
 
   return (
-    <p>{catFact}</p>
-  )
-}
+    <div>
+      <h2>Random Cat Facts</h2>
+      {catFacts.length > 0 && (
+        <>
+          <ul>
+            {catFacts.map((fact, index) => (
+              <li key={index}>{fact.text}</li>
+            ))}
+          </ul>
+        </>
+      )}
+    </div>
+  );
+};
 
-export default RandomCatFact
+export default RandomCatFacts;
