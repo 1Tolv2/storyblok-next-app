@@ -6,8 +6,10 @@ import Page from "../components/Page";
 import Teaser from "../components/Teaser";
 import RandomCatFact from "../components/RandomCatFact";
 import FeaturedPosts from "../components/FeaturedPosts";
+import PostSearch from "../components/PostSearch";
 
 const components = {
+  "post-search": PostSearch,
   "random-cat-fact": RandomCatFact,
   "featured-posts": FeaturedPosts,
   feature: Feature,
