@@ -4,8 +4,10 @@ import Feature from "../components/Feature";
 import Grid from "../components/Grid";
 import Page from "../components/Page";
 import Teaser from "../components/Teaser";
+import RandomCatFact from "../components/RandomCatFact";
 
 const components = {
+  "random-cat-fact": RandomCatFact,
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
@@ -13,7 +15,7 @@ const components = {
 };
 
 storyblokInit({
-  accessToken: "your-preview-token",
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components,
 });

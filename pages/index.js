@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
 import {
   useStoryblokState,
   getStoryblokApi,
@@ -35,7 +34,6 @@ export async function getStaticProps() {
 
   const storyblokApi = getStoryblokApi();
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
-
   return {
     props: {
       story: data ? data.story : false,
