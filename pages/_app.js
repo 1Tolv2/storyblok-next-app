@@ -9,6 +9,7 @@ import FeaturedPosts from "../components/FeaturedPosts";
 import PostSearch from "../components/PostSearch";
 import PostFeed from "../components/PostFeed";
 import BlogPost from "../components/BlogPost";
+import ProjektMall from "../components/ProjektMall";
 
 const components = {
   "post-feed": PostFeed,
@@ -16,6 +17,7 @@ const components = {
   "random-cat-fact": RandomCatFact,
   "featured-posts": FeaturedPosts,
   "blog-post": BlogPost,
+  "projekt-mall": ProjektMall,
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
