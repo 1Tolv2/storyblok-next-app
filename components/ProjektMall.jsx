@@ -5,8 +5,6 @@ const ProjektMall = ({ blok }) => {
     <div>
       <ul>
         {blok.body.map((item) => {
-  console.log("ITEM",item);
-
           return (
             <li>
               <h2>{item.title}</h2>

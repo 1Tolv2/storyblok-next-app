@@ -8,7 +8,6 @@ const PostFeed = ({ blok }) => {
   const router = useRouter();
 
   const renderFeed = (stories) => {
-    console.log(stories)
     if (typeof router.query.search !== "undefined") {
       const posts = stories.filter((post) => {
         return (
