@@ -29,7 +29,7 @@ export async function getStaticProps() {
   let slug = "home";
 
   let sbParams = {
-    version: "draft", // or 'published',
+    // version: "draft", // or 'published'
     resolve_relations: ["featured-posts.posts"],
   };
 
