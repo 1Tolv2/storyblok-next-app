@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { getStoryblokApi } from "@storyblok/react";
+import { getStoryblokApi, storyblokEditable } from "@storyblok/react";
 
 const PostFeed = ({ blok }) => {
   const [posts, setPosts] = useState(null);
@@ -37,7 +37,7 @@ const PostFeed = ({ blok }) => {
   }, []);
 
   return (
-    <div>
+    <div {...storyblokEditable(blok)}>
       {posts && (
         <>
           <ul>

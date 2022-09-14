@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { storyblokEditable } from "@storyblok/react";
 
 const RandomCatFacts = ({ blok }) => {
   const [catFacts, setCatFacts] = useState([]);
@@ -10,7 +11,7 @@ const RandomCatFacts = ({ blok }) => {
   }, []);
 
   return (
-    <div>
+    <div {...storyblokEditable(blok)}>
       <h2>Random Cat Facts</h2>
       {catFacts.length > 0 && (
         <>
