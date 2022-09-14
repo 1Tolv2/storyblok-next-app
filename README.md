@@ -71,6 +71,8 @@ This project deploys the front end to Vercel through github automatically when y
 ### **How To**
 To deploy updates to production create a pull request in Github from development to main. In the pull request a check is made to see if the deploy is successful before allowing to merge in to production.
 
+<img src="/public/pull-request-verification-screenshot.png" alt="screenshot of an approved pull request"/>
+
 ### **Difference Between Production and Development Deploys**
 
 The production deployment in Vercel deploys with the **public access token**, so it will only display published content. The preview deployment deploys with the **preview access token** and will display unpublished content.
