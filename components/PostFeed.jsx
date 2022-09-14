@@ -1,39 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { getStoryblokApi, storyblokEditable } from "@storyblok/react";
+import { storyblokEditable } from "@storyblok/react";
 
 const PostFeed = ({ blok }) => {
   const [posts, setPosts] = useState(null);
   const router = useRouter();
 
   const renderFeed = (stories) => {
+    console.log(stories)
     if (typeof router.query.search !== "undefined") {
       const posts = stories.filter((post) => {
         return (
-          post.tag_list.includes(router.query.search) &&
-          !post.is_startpage &&
-          post.full_slug.split("/")[0] === "posts"
+          post.tag_list.includes(router.query.search)
         );
       });
       setPosts(posts);
     } else {
-      setPosts(
-        stories.filter(
-          (post) =>
-            !post.is_startpage && post.full_slug.split("/")[0] === "posts"
-        )
-      );
+      setPosts(stories);
     }
   };
 
   useEffect(() => {
-    const storyblokApi = getStoryblokApi();
-    storyblokApi
-      .get(`cdn/stories`, {
-        version: "draft",
-      })
-      .then(({ data }) => renderFeed(data.stories));
+    fetch(`${window.location.origin}/api/posts`)
+    .then((res) => res.json())
+    .then((data) => renderFeed(data.stories))
+
   }, []);
 
   return (
@@ -41,7 +33,7 @@ const PostFeed = ({ blok }) => {
       {posts && (
         <>
           <ul>
-            {posts.map((post, index) => {
+            {posts && posts.map((post, index) => {
               return (
                 <li key={index}>
                   <Link href={`/posts/${post.slug}`}>
