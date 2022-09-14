@@ -7,11 +7,15 @@ import Teaser from "../components/Teaser";
 import RandomCatFact from "../components/RandomCatFact";
 import FeaturedPosts from "../components/FeaturedPosts";
 import PostSearch from "../components/PostSearch";
+import PostFeed from "../components/PostFeed";
+import BlogPost from "../components/BlogPost";
 
 const components = {
+  "post-feed": PostFeed,
   "post-search": PostSearch,
   "random-cat-fact": RandomCatFact,
   "featured-posts": FeaturedPosts,
+  "blog-post": BlogPost,
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
