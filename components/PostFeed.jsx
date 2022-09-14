@@ -37,7 +37,7 @@ const PostFeed = ({ blok }) => {
                 <li key={index}>
                   <Link href={`/posts/${post.slug}`}>
                     <a>
-                      <h3>{post.content.title}</h3>
+                      <h2>{post.content.title}</h2>
                     </a>
                   </Link>
                   <img src={post.content.image.filename} alt={post.content.image.alt} style={{maxWidth: "200px"}}/>
