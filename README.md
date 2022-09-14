@@ -66,13 +66,16 @@ $ npm run build # or yarn build
 
 
 ## Deploy
-To deploy updates to production create a pull request in Github from development to main. The merge will be verified 
-
 This project deploys the front end to Vercel through github automatically when you push to a branch.
 
-The production branch in Vercel deploys with the public access token, so it will only display published pages. The preview branch deploys with the preview access token and will display draft unpublished pages.
+### **How To**
+To deploy updates to production create a pull request in Github from development to main. In the pull request a check is made to see if the deploy is successful before allowing to merge in to production.
 
-During development if you wish to see only the published content you can open the page file, example `pages/index.js`, then uncomment the `version: "draft"` line and the url will fetch with the parameter. *The draft version can't be accessed by the public token*
+### **Difference Between Production and Development Deploys**
+
+The production deployment in Vercel deploys with the **public access token**, so it will only display published content. The preview deployment deploys with the **preview access token** and will display unpublished content.
+
+During development if you wish to see only the published content you can open the page file, for example `pages/index.js`, then uncomment the `version: "draft"`-line and the url will fetch with that parameter. *The draft version of the site can't be accessed by the public token*
 
 ```js
   let sbParams = {
