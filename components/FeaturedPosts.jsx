@@ -2,22 +2,26 @@ import React from "react";
 import Link from "next/link";
 
 const FeaturedPosts = ({ blok }) => {
-  console.log(blok.posts);
 
   return (
     <div>
-        
       <h2>Featured Posts</h2>
-      <ul>
+      <ul style={{ display: "flex"}}>
         {blok.posts.map((post, index) => {
           return (
             <li key={index} style={{ listStyle: "none" }}>
-              <h3 style={{textDecoration: "underline", color: "blue"}}><Link href={`/posts/${post.slug}`}><a>{post.content.title}</a></Link></h3>
-              <p>{post.content.content}</p>
-              <img src={post.content.image.filename} alt={post.content.image.alt}/>
-              <hr/>
+              <h3>
+                <Link href={`/posts/${post.slug}`}>
+                  <a>{post.content.title}</a>
+                </Link>
+              </h3>
+              <img
+                src={post.content.image.filename}
+                alt={post.content.image.alt}
+                style={{maxHeight: "200px"}}
+              />
+              <hr />
             </li>
-            
           );
         })}
       </ul>

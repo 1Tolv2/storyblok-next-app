@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 
 const PostSearch = ({ blok }) => {
-  const [search, setSearch] = useState(null);
+  const [search, setSearch] = useState("");
   const router = useRouter()
 
   const handleOnClick = (e) => {
