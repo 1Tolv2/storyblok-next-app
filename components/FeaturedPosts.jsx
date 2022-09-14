@@ -7,17 +7,17 @@ const FeaturedPosts = ({ blok }) => {
     <div {...storyblokEditable(blok)}>
       <h2>Featured Posts</h2>
       <ul style={{ display: "flex" }}>
-        {blok.posts.map((post, index) => {
+        {blok?.posts?.map((post, index) => {
           return (
             <li key={index} style={{ listStyle: "none" }}>
               <h3>
-                <Link href={`/posts/${post.slug}`}>
-                  <a>{post.content.title}</a>
+                <Link href={`/posts/${post?.slug}`}>
+                  <a>{post?.content?.title}</a>
                 </Link>
               </h3>
               <img
-                src={post.content.image.filename}
-                alt={post.content.image.alt}
+                src={post?.content?.image?.filename}
+                alt={post?.content?.image?.alt}
                 style={{ maxHeight: "200px" }}
               />
               <hr />
