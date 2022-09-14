@@ -38,7 +38,6 @@ const WeatherWidget = ({ blok }) => {
               src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
               alt={weather.weather[0].description}
             />
-            {console.log(weather)}
           </div>
         </div>
       )}
