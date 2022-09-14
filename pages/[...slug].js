@@ -29,12 +29,12 @@ export async function getStaticProps({ params }) {
   let slug = params.slug ? params.slug.join("/") : "home";
 
   let sbParams = {
-    version: "draft", // or 'published'
+    // version: "draft", // or 'published'
   };
 
   const storyblokApi = getStoryblokApi();
+  // console.log("HERE", storyblokApi);
   let { data } = await storyblokApi.get(`cdn/stories/${slug}`, sbParams);
-
   return {
     props: {
       story: data ? data.story : false,

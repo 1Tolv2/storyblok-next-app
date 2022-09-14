@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import { storyblokEditable } from "@storyblok/react";
 
 const FeaturedPosts = ({ blok }) => {
-
   return (
-    <div>
+    <div {...storyblokEditable(blok)}>
       <h2>Featured Posts</h2>
-      <ul style={{ display: "flex"}}>
+      <ul style={{ display: "flex" }}>
         {blok.posts.map((post, index) => {
           return (
             <li key={index} style={{ listStyle: "none" }}>
@@ -18,7 +18,7 @@ const FeaturedPosts = ({ blok }) => {
               <img
                 src={post.content.image.filename}
                 alt={post.content.image.alt}
-                style={{maxHeight: "200px"}}
+                style={{ maxHeight: "200px" }}
               />
               <hr />
             </li>
