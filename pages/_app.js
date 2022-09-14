@@ -10,6 +10,7 @@ import PostSearch from "../components/PostSearch";
 import PostFeed from "../components/PostFeed";
 import BlogPost from "../components/BlogPost";
 import ProjektMall from "../components/ProjektMall";
+import WeatherWidget from "../components/WeatherWidget";
 
 const components = {
   "post-feed": PostFeed,
@@ -18,6 +19,7 @@ const components = {
   "featured-posts": FeaturedPosts,
   "blog-post": BlogPost,
   "projekt-mall": ProjektMall,
+  "weather-widget": WeatherWidget,
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
