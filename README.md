@@ -18,7 +18,7 @@ You need an [OpenWeather](https://openweathermap.org/) API key.
 
 ### 2. Install Dependecies 
 ```sh
-$  npm install # or yarn install
+$  npm install
 ```
 
 ### 3. Adding Environment Variables
