@@ -5,7 +5,7 @@ const WeatherWidget = ({ blok }) => {
 
   const getGeoData = () => {
     fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=stockholm,se&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=stockholm,se&appid=${process.env.NEXT_PUBLIC_OPENWEATHER_API_KEY}`
     )
       .then((res) => res.json())
       .then((data) =>
