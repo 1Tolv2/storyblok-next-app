@@ -12,7 +12,7 @@ To use this project you have to have access to the storyblok space, you get acce
 ### 1. Clone the Repository
 
 ```sh
-  $ git clone https://github.com/storyblok/react-next-boilerplate.git
+  $ git clone https://github.com/1Tolv2/storyblok-next-app.git
 ```
 
 ### 2. Install Dependecies 
