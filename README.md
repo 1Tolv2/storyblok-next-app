@@ -5,12 +5,13 @@ This repository is built with Next.js and [Storyblok](https://www.storyblok.com)
 ## Requirements
 To use this project you have to have access to the storyblok space, you get access by being invited to the space through email, contact the space admin. 
 
+You need an [OpenWeather](https://openweathermap.org/) API key.
+
 **Admin**: To invite users to the space open the space, go to `Settings -> Users` and fill out the form.
 
 ## Get started
 
 ### 1. Clone the Repository
-
 ```sh
   $ git clone https://github.com/1Tolv2/storyblok-next-app.git
 ```
@@ -27,7 +28,7 @@ For this you need the [Vercel CLI](https://vercel.com/docs/cli) installed, if yo
 ```sh
 $ vercel link
 ``` 
-Answer the questions and after it's done you can retrive the environment variables from the V project. An `.env` file will be created at the root. 
+Answer the questions and after it's done you can retrive the environment variables from the vercel project. An `.env` file will be created at the root. 
 ```sh
 $ vercel env pull
 ```
@@ -35,11 +36,13 @@ $ vercel env pull
 #### **b. Manually Creating the .env File**
 Create an `.env` file at the root of the repository, make sure it's added in your `.gitignore`.
 
-Add the following line to your `.env` file with the access token which you can find in the storyblok project space under `Settings -> Access Tokens`.
+Add the following lines to your `.env` file with the access tokens/API keys. The storyblok token can be found in the project space under `Settings -> Access Tokens`.
 Use the preview token for the draft version and public for published version.
+The OpenWeather API key can be found on on their website under {Username}/API keys 
 
 ```js
 NEXT_PREVIEW_STORYBLOK_ACCESS_TOKEN= //token here
+NEXT_PUBLIC_OPENWEATHER_API_KEY= //token here
 ```
 
 ```js
