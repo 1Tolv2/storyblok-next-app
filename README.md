@@ -32,7 +32,7 @@ To use this project you will need the following:
 
 ### 2. Install Dependecies 
 ```sh
-$  npm install # or yarn install
+$  npm install
 ```
 
 ### 3. Adding Environment Variables
